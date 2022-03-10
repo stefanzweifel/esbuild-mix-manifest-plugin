@@ -1,0 +1,1 @@
+# esbuild-mix-manifest-plugin
