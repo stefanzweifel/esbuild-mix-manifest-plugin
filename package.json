@@ -1,6 +1,6 @@
 {
   "name": "@wnx/esbuild-mix-manifest-plugin",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "esbuild plugin to generate a mix-manifest.json file inspired by Laravel Mix.",
   "main": "index.js",
   "scripts": {
