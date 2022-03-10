@@ -1,0 +1,34 @@
+{
+  "name": "@wnx/esbuild-mix-manifest-plugin",
+  "version": "0.0.1",
+  "description": "esbuild plugin to generate a mix-manifest.json file inspired by Laravel Mix.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanzweifel/esbuild-mix-manifest-plugin.git"
+  },
+  "keywords": [
+    "esbuild",
+    "plugin",
+    "manifest",
+    "laravel-mix"
+  ],
+  "dependencies": {
+    "md5": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.25"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.14.25"
+  },
+  "author": "Stefan Zweifel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefanzweifel/esbuild-mix-manifest-plugin/issues"
+  },
+  "homepage": "https://github.com/stefanzweifel/esbuild-mix-manifest-plugin#readme"
+}
