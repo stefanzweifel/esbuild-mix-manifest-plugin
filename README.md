@@ -2,24 +2,43 @@
 
 An [esbuild](https://esbuild.github.io/) plugin to generate a `mix-manifest.json` compatible with [Laravel Mix](https://laravel.com/docs/master/mix#versioning-and-cache-busting).
 
+## Installation
+
+You can install the plugin via npm or yarn:
+
+```bash
+npm install @stefanzweifel/esbuild-mix-manifest-plugin --save-dev
+yarn add @stefanzweifel/esbuild-mix-manifest-plugin --dev
+```
+
 ## Usage
 
-> TBD
+Load the `mixManifestPlugin` in your `esbuild.js`, `build.js` (or whatever you call it) and pass it to the `plugins` option of `esbuild.build()`.
+
+It's recommended to set the `outdir` and `outbase` config value accordingly.
+
+`metafile` has to be set to true, for the plugin to work.
 
 ```js
+// build.js
+const esbuild = require("esbuild")
+const mixManifestPlugin = require('@stefanzweifel/esbuild-mix-manifest-plugin')
+
 esbuild.build({
     // Define entrypoints to be bundled.
     entryPoints: {
         'css/main': 'resources/css/main.css',
+        'js/main': 'resources/js/main.js',
     },
 
     // Define output directory and output base.
-    // The CSS file above will be place in 
+    // The JS and CSS file above will be place in 
     // `source/assets/build/css/main.css`
+    // `source/assets/build/js/main.js`
     outdir: 'source/assets/build',
     outbase: 'source/assets/build',
 
-    // Required for the plugin
+    // Required for the plugin to work
     metafile: true,
 
     plugins: [
