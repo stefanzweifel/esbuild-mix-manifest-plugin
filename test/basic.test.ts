@@ -69,21 +69,23 @@ test('it should generate a different filename if specified', async () => {
 });
 
 test('it should throw an error if building without an outdir or outfile', async () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
     try {
         await require('esbuild').build(buildOptions({}, {outdir: undefined, outfile: undefined}));
-    } catch (e) {
-        expect(e.message).toMatch(/outdir/);
+    } catch (error) {
+        expect(error).toBeInstanceOf(Error);
+        expect(error.message).toMatch(/outdir/);
     }
 });
 
 test('it should throw an error with esbuild write=false option', async () => {
-    expect.assertions(1);
+    expect.assertions(2);
 
     try {
         await require('esbuild').build(buildOptions({}, {write: false}));
-    } catch (e) {
-        expect(e.message).toMatch(/write=false option/);
+    } catch (error) {
+        expect(error).toBeInstanceOf(Error);
+        expect(error.message).toMatch(/write=false option/);
     }
 })
