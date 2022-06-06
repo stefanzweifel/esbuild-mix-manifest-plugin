@@ -1,6 +1,6 @@
 {
   "name": "@stefanzweifel/esbuild-mix-manifest-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "esbuild plugin to generate a mix-manifest.json file inspired by Laravel Mix.",
   "main": "lib/index.js",
   "files": [
