@@ -11,8 +11,8 @@
     "url": "git+https://github.com/stefanzweifel/esbuild-mix-manifest-plugin.git"
   },
   "scripts": {
-    "build": "esbuild src/index.ts --platform=node --outfile=lib/index.js",
-    "build-ts": "tsc",
+    "build": "tsc",
+    "build-esbuild": "esbuild src/index.ts --platform=node --outfile=lib/index.js",
     "build:watch": "tsc --watch",
     "test": "jest"
   },
