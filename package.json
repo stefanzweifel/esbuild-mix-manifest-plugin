@@ -1,6 +1,6 @@
 {
   "name": "@stefanzweifel/esbuild-mix-manifest-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "esbuild plugin to generate a mix-manifest.json file inspired by Laravel Mix.",
   "main": "lib/index.js",
   "files": [
@@ -11,8 +11,8 @@
     "url": "git+https://github.com/stefanzweifel/esbuild-mix-manifest-plugin.git"
   },
   "scripts": {
-    "build": "esbuild src/index.ts --platform=node --outfile=lib/index.js",
-    "build-ts": "tsc",
+    "build": "tsc",
+    "build-esbuild": "esbuild src/index.ts --platform=node --outfile=lib/index.js",
     "build:watch": "tsc --watch",
     "test": "jest"
   },
