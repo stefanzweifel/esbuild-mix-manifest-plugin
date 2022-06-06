@@ -1,5 +1,7 @@
 # esbuild-mix-manifest-plugin
 
+[![Tests](https://github.com/stefanzweifel/esbuild-mix-manifest-plugin/actions/workflows/run-tests.yml/badge.svg)](https://github.com/stefanzweifel/esbuild-mix-manifest-plugin/actions/workflows/run-tests.yml)
+
 An [esbuild](https://esbuild.github.io/) plugin to generate a `mix-manifest.json` compatible with [Laravel Mix](https://laravel.com/docs/master/mix#versioning-and-cache-busting).
 
 ## Installation
@@ -15,13 +17,12 @@ yarn add @stefanzweifel/esbuild-mix-manifest-plugin --dev
 
 Load the `mixManifestPlugin` in your `esbuild.js`, `build.js` (or whatever you call it) and pass it to the `plugins` option of `esbuild.build()`.
 
-It's recommended to set the `outdir` and `outbase` config value accordingly.
-
-`metafile` has to be set to true, for the plugin to work.
+You MUST set the `outdir` and `outbase` config values accordingly.
+`metafile` MUST be set to true, for the plugin to work.
 
 ```js
 // build.js
-const esbuild = require("esbuild")
+const esbuild = require('esbuild')
 const mixManifestPlugin = require('@stefanzweifel/esbuild-mix-manifest-plugin')
 
 esbuild.build({
