@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "outDir": "./lib",
+    "resolveJsonModule": true,
+    "strict": false,
+    "target": "ES2021"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
